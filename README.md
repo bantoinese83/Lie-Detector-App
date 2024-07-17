@@ -30,7 +30,7 @@ The project is structured into the following modules:
 
 ## Usage
 
-1. **Data Generation:** Run `[synthetic_dataset_generator_v1.py](synthetic_dataset_generator_v1.py)data_display.py` to generate synthetic data for training and testing the lie detector model.
+1. **Data Generation:** Run `synthetic_dataset_generator_v1.py` to generate synthetic data for training and testing the lie detector model.
 2. **Model Training:** Run `train.py` to train and save the model.
 3. **Run the App:** Execute `streamlit run streamlit_app.py` to run the Streamlit app.
 4. **Flask API:** Run `flask_app.py` to start the Flask API server.
@@ -61,13 +61,22 @@ The project is structured into the following modules:
    pip install -r requirements.txt
    ```
    
-   2. Run the Streamlit app:
-      ```bash
-       streamlit run streamlit_app.py
-       ```
+2. Run the Streamlit app:
+   ```bash
+    streamlit run streamlit_app.py
+    ```
       
-    3. Start the Flask API:
-   4. ```bash
-      python flask_app.py
-      ```
-      
+3. Start the Flask API:
+4. ```bash
+     python flask_app.py
+     ```
+
+
+## Acknowledgements
+- Streamlit
+- Flask
+- scikit-learn
+- pandas
+- matplotlib
+- scipy
+- NumPy
