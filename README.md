@@ -6,14 +6,15 @@ This project implements a Streamlit web application for simulating a lie detecto
 
 The project is structured into the following modules:
 
-- **`data_display.py`:** This module contains functions for loading, displaying, and analyzing the data.
+- **`synthetic_dataset_generator_v1.py`:** This module generates synthetic data for training and testing the lie detector model.
+- **`data_display.py`:** This module provides functions for displaying the synthetic data.
+- - **`train.py`:** This module contains functions for training and evaluating the machine learning model.
     - **`load_data(train_path, val_path, test_path)`:** Loads data from parquet files.
     - **`preprocess_data(data, target_column='is_lying')`:** Separates features and target variables from the DataFrame.
     - **`scale_data(train_features, val_features, test_features)`:** Applies standardization to the features.
     - **`feature_selection(train_features, train_target, feature_names)`:** Performs feature selection using a Random Forest model.
     - **`filter_selected_features(features, selected_features)`:** Filters features based on feature selection results.
     - **`display_data_info(training_data, validation_data, testing_data)`:** Displays information about the data, including shapes and summaries.
-- **`model_train.py`:** This module contains functions for training and evaluating the machine learning model.
     - **`train_model(train_features, train_target)`:** Trains a Random Forest model with GridSearchCV for hyperparameter tuning.
     - **`evaluate_model(model, val_features, val_target, test_features, test_target)`:** Evaluates the model on the validation and test sets, calculating metrics such as accuracy, precision, recall, and F1-score.
     - **`save_model(model, filename)`:** Saves the trained model to disk.
@@ -29,8 +30,8 @@ The project is structured into the following modules:
 
 ## Usage
 
-1. **Data Generation:** Run `data_display.py` to generate synthetic data for training and testing the lie detector model.
-2. **Model Training:** Run `model_train.py` to train and save the model.
+1. **Data Generation:** Run `[synthetic_dataset_generator_v1.py](synthetic_dataset_generator_v1.py)data_display.py` to generate synthetic data for training and testing the lie detector model.
+2. **Model Training:** Run `train.py` to train and save the model.
 3. **Run the App:** Execute `streamlit run streamlit_app.py` to run the Streamlit app.
 4. **Flask API:** Run `flask_app.py` to start the Flask API server.
 
