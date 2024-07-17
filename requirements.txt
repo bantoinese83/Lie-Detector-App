@@ -1,0 +1,9 @@
+joblib~=1.4.2
+pandas~=2.2.2
+scikit-learn~=1.4.2
+flask~=3.0.3
+loguru~=0.5.3
+scipy~=1.12.0
+matplotlib~=3.8.4
+numpy~=1.26.4
+streamlit~=1.36.0
